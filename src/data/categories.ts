@@ -1,0 +1,153 @@
+import { ComplaintCategory } from '../types';
+
+export const COMPLAINT_CATEGORIES: ComplaintCategory[] = [
+  {
+    id: 'c1000000-0000-0000-0000-000000000001',
+    code: 'CAT-GARB',
+    name: 'Garbage Not Collected / Overflowing Bins',
+    nameTe: 'చెత్త సేకరించలేదు / డస్ట్‌బిన్ పొంగిపొర్లుతోంది',
+    nameHi: 'कचरा नहीं उठाया गया / डस्टबिन भरा हुआ',
+    departmentId: 'd1000000-0000-0000-0000-000000000001',
+    defaultPriority: 'high',
+    slaDays: 1,
+    slaHours: 24,
+    iconName: 'Trash2'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000002',
+    code: 'CAT-POTH',
+    name: 'Road Potholes & Surface Damage',
+    nameTe: 'రోడ్డు గుంతలు & ఉపరితల నష్టం',
+    nameHi: 'सड़क के गड्ढे और सतह की खराबी',
+    departmentId: 'd1000000-0000-0000-0000-000000000002',
+    defaultPriority: 'high',
+    slaDays: 7,
+    slaHours: 168,
+    iconName: 'Activity',
+    emergencyWarning: 'If deep pothole poses immediate risk to two-wheelers, caution signs are deployed.'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000003',
+    code: 'CAT-STRT',
+    name: 'Street Lights Not Working',
+    nameTe: 'వీధి దీపాలు పనిచేయడం లేదు',
+    nameHi: 'स्ट्रीट लाइट बंद है / नहीं जल रही',
+    departmentId: 'd1000000-0000-0000-0000-000000000004',
+    defaultPriority: 'medium',
+    slaDays: 3,
+    slaHours: 72,
+    iconName: 'Lightbulb'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000004',
+    code: 'CAT-DRAN',
+    name: 'Drainage / Sewage Overflow',
+    nameTe: 'డ్రైనేజీ / మురుగునీరు పొంగిపొర్లుతోంది',
+    nameHi: 'नाली या सीवर का गंदा पानी सड़क पर बहना',
+    departmentId: 'd1000000-0000-0000-0000-000000000003',
+    defaultPriority: 'high',
+    slaDays: 2,
+    slaHours: 48,
+    iconName: 'Waves',
+    emergencyWarning: 'Health hazard: avoid contact with contaminated drainage water.'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000005',
+    code: 'CAT-MANH',
+    name: 'Open / Broken Manhole Cover',
+    nameTe: 'తెరిచిన / విరిగిన మ్యాన్‌హోల్ మూత',
+    nameHi: 'खुला या टूटा हुआ मेनहोल ढक्कन',
+    departmentId: 'd1000000-0000-0000-0000-000000000003',
+    defaultPriority: 'critical',
+    slaDays: 1,
+    slaHours: 24,
+    iconName: 'AlertTriangle',
+    emergencyWarning: 'CRITICAL HAZARD: Risk of pedestrian or vehicle falls. Priority barricading team is dispatched.'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000006',
+    code: 'CAT-WATR',
+    name: 'Drinking Water Contamination / Low Pressure',
+    nameTe: 'తాగునీటి కాలుష్యం / తక్కువ పీడనం',
+    nameHi: 'पीने के पानी का प्रदूषण / कम दबाव',
+    departmentId: 'd1000000-0000-0000-0000-000000000003',
+    defaultPriority: 'high',
+    slaDays: 3,
+    slaHours: 72,
+    iconName: 'Droplets'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000007',
+    code: 'CAT-TOIL',
+    name: 'Public Toilet Maintenance & Cleanliness',
+    nameTe: 'ప్రజా మరుగుదొడ్ల నిర్వహణ & పరిశుభ్రత',
+    nameHi: 'सार्वजनिक शौचालय की सफाई और रखरखाव',
+    departmentId: 'd1000000-0000-0000-0000-000000000005',
+    defaultPriority: 'medium',
+    slaDays: 2,
+    slaHours: 48,
+    iconName: 'Building'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000008',
+    code: 'CAT-STRAY',
+    name: 'Stray Dog Menace / Animal Issues',
+    nameTe: 'వీధి కుక్కల బెడద / జంతువుల సమస్యలు',
+    nameHi: 'आवारा कुत्तों का आतंक / पशु समस्या',
+    departmentId: 'd1000000-0000-0000-0000-000000000005',
+    defaultPriority: 'medium',
+    slaDays: 4,
+    slaHours: 96,
+    iconName: 'ShieldAlert',
+    emergencyWarning: 'For animal bites, visit the nearest government hospital immediately for anti-rabies vaccination.'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000009',
+    code: 'CAT-MOSQ',
+    name: 'Mosquito Menace / Fogging Request',
+    nameTe: 'దోమల బెడద / ఫాగింగ్ అభ్యర్థన',
+    nameHi: 'मच्छरों का प्रकोप / फॉगिंग का अनुरोध',
+    departmentId: 'd1000000-0000-0000-0000-000000000005',
+    defaultPriority: 'low',
+    slaDays: 3,
+    slaHours: 72,
+    iconName: 'Wind'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000010',
+    code: 'CAT-TREE',
+    name: 'Fallen Tree / Hazardous Hanging Branches',
+    nameTe: 'కూలిన చెట్టు / ప్రమాదకరమైన కొమ్మలు',
+    nameHi: 'गिरा हुआ पेड़ / खतरनाक लटकती डालियां',
+    departmentId: 'd1000000-0000-0000-0000-000000000006',
+    defaultPriority: 'high',
+    slaDays: 2,
+    slaHours: 48,
+    iconName: 'Trees',
+    emergencyWarning: 'If branches have fallen on live electric cables, do not touch. Call 112 immediately.'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000011',
+    code: 'CAT-FOOT',
+    name: 'Broken Footpaths & Pavements',
+    nameTe: 'విరిగిన ఫుట్‌పాత్ & పేవ్‌మెంట్లు',
+    nameHi: 'टूटे हुए फुटपाथ / चलने का रास्ता',
+    departmentId: 'd1000000-0000-0000-0000-000000000002',
+    defaultPriority: 'medium',
+    slaDays: 7,
+    slaHours: 168,
+    iconName: 'Footprints'
+  },
+  {
+    id: 'c1000000-0000-0000-0000-000000000012',
+    code: 'CAT-ENCR',
+    name: 'Illegal Encroachment on Public Roads',
+    nameTe: 'ప్రజా రోడ్లపై అక్రమ ఆక్రమణలు',
+    nameHi: 'सार्वजनिक सड़कों और रास्तों पर अवैध अतिक्रमण',
+    departmentId: 'd1000000-0000-0000-0000-000000000007',
+    defaultPriority: 'medium',
+    slaDays: 10,
+    slaHours: 240,
+    iconName: 'Ban'
+  }
+];
